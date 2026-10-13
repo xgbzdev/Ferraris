@@ -1,0 +1,11 @@
+# Clean URLs (http://host/gh/ping). If your host ignores .htaccess, use http://host/index.php/... instead.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]
+</IfModule>
+# Do not let the host force https: the phone cannot do it.
+<IfModule mod_headers.c>
+Header unset Strict-Transport-Security
+</IfModule>

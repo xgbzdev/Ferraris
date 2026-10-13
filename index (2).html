@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Ferraris</title>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <header>
+    <h1>Ferraris</h1>
+    <span class="sub">GitHub app store</span>
+  </header>
+  <section class="add">
+    <input id="repo" type="text" placeholder="user/repository" autocapitalize="off" autocorrect="off">
+    <button id="add">Add</button>
+  </section>
+  <p id="status" class="status"></p>
+  <ul id="list"></ul>
+  <p id="empty" class="empty">No apps yet.<br>Add a GitHub repo that contains a <b>manifest.webapp</b>.</p>
+  <section class="pc">
+    <label for="proxy">Helper server (your PC with install-server.js, or your web host)</label>
+    <div class="add">
+      <input id="proxy" type="text" placeholder="http://192.168.1.10:8080" autocapitalize="off" autocorrect="off">
+      <button id="saveproxy">Save</button>
+    </div>
+    <p id="proxystatus" class="status"></p>
+  </section>
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
